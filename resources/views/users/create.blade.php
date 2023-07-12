@@ -36,7 +36,7 @@
                     @error ('password')<p class="text text-danger">{{ $message}}</p> @enderror
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primaey"> Save</button>
+                    <button type="submit" class="btn btn-primary"> Save</button>
                 </div>
                 </form>
             </div>
