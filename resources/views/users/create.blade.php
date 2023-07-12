@@ -12,6 +12,9 @@
   </head>
   <body>
     <section class="container mt-5">
+        @if(session('succes')) 
+            <div class="alert alert-success">{{session('success')}}</div>
+        @endif
         <div class="card">
             <div class="card-header">User Create</div>
             <div class="card-body">

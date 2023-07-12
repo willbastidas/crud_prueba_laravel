@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\userStore;
 use Illuminate\Http\Request;
-use illuminate\Http\UserStone;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -29,7 +29,9 @@ class UserController extends Controller
      */
     public function store(userStore $request)
     {
-        //
+        $input = $request->validated();
+        User::create($input);
+        return redirect()->back()->withSuccess('User Created successfully.');
     }
 
     /**
