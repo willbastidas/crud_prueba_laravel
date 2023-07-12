@@ -20,14 +20,17 @@
                 <div class="form-group">    
                     <label>Name</label>
                     <input type="text" name="name" class="form-control">
+                    @error ('name')<p class="text text-danger">{{ $message}}</p> @enderror
                 </div>
                 <div class="form-group">    
                     <label>Email</label>
                     <input type="email" name="email" class="form-control">
+                    @error ('email')<p class="text text-danger">{{ $message}}</p> @enderror
                 </div>
                 <div class="form-group">    
                     <label>Password</label>
                     <input type="password" name="password" class="form-control">
+                    @error ('password')<p class="text text-danger">{{ $message}}</p> @enderror
                 </div>
                 <div>
                     <button type="submit" class="btn btn-primaey"> Save</button>
