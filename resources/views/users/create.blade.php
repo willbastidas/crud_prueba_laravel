@@ -12,7 +12,7 @@
   </head>
   <body>
     <section class="container mt-5">
-        @if(session('succes')) 
+        @if(session('success')) 
             <div class="alert alert-success">{{session('success')}}</div>
         @endif
         <div class="card">

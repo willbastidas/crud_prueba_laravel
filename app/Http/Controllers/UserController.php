@@ -13,7 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $data = User::all();
+        return view('users.index', compact('data'));
     }
 
     /**
@@ -30,6 +31,7 @@ class UserController extends Controller
     public function store(userStore $request)
     {
         $input = $request->validated();
+        $input['password'] = bcrypt($input['password']);
         User::create($input);
         return redirect()->back()->withSuccess('User Created successfully.');
     }
