@@ -39,23 +39,26 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        User::destroy($id);
+
+        return redirect()->back()->withdele('User has been deleted successfully');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $data = user::find($id);
+        return view('users.index',compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(userStore $request,$id)
     {
         //
     }
