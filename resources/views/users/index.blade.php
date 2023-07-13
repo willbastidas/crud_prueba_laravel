@@ -25,7 +25,7 @@
         <td>{{$val->email}}</td>
         <td>
             <a href="{{ route('user.edit',$val->id)}}" class="btn btn-secondary">Edit</a>
-            <a href="{{ route('user.show', $val->id)}}" calss="btn btn-danger">Delete</a>
+            <a href="{{ route('user.show', $val->id)}}" class="btn btn-danger">Delete</a>
         </td>
         </tr>
     </tbody> @endforeach
